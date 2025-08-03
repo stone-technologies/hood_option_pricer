@@ -1,0 +1,2 @@
+[console_scripts]
+hood-pricer = hood_option_pricer.cli:main

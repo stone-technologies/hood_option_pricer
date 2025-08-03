@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: hood-option-pricer
+Version: 0.1.0
+Summary: HOOD option pricing library
+Home-page: https://github.com/yourorg/hood-option-pricer
+Author: Stone Technologies
+Author-email: you@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=2.0
+Requires-Dist: scipy>=1.10
+Requires-Dist: yfinance==0.2.54
+Requires-Dist: curl-cffi>=0.9.0
+Dynamic: license-file
+
+# HOOD Option Pricer
+
+Fetch and price HOOD (Robinhood) options (calls & puts) via Black–Scholes, Cox–Ross–Rubinstein, and Monte Carlo.
+
+## Installation
+
+```bash
+pip install .
+```
+
+Or use:
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+```python
+from hood_option_pricer.cli import main
+# CLI: hood-pricer --ticker HOOD --strike 35 --expiry 2025-12-19
+
+from hood_option_pricer import estimate
+import pandas as pd
+
+df = estimate(ticker="HOOD", strike=35.0, expiry="2025-12-19")
+print(df)
+```
+
+## Development
+
+- Tests: `pytest`
+- Lint: `flake8`
+- Format: `black src tests`
