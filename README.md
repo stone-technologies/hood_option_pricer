@@ -1,6 +1,6 @@
 # HOOD Option Pricer
 
-Fetch and price HOOD (Robinhood) options (calls & puts) via Black–Scholes, Cox–Ross–Rubinstein, and Monte Carlo.
+Option pricer for little stone for any ticker, any expiration, any strike.
 
 ## Installation
 
@@ -31,3 +31,9 @@ print(df)
 - Tests: `pytest`
 - Lint: `flake8`
 - Format: `black src tests`
+
+## TODO:
+
+Add volatility surface 
+Add payoff graphs
+Add proprietary volatility calculations (not sure if worth it for liquid options, maybe biotech or illiquid).
